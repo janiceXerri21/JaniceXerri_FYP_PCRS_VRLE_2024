@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Recommendation : MonoBehaviour
+public class Recommendation //purely informational
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public int CourseCode;
+    public string Degree;
+    public string DegreeSpecializations;
+    public string Campus;
+    public string KeySkills;
+    public string Filter;
+    public float Success_rate;
 }
+
+
