@@ -5,9 +5,10 @@ using UnityEngine;
 public class FileReader : MonoBehaviour
 {
     //to store the information 
-    List<Recommendation> recommendations = new List<Recommendation>();
+    public List<Recommendation> recommendations = new List<Recommendation>();
+
     //using this for initialisation
-    void Start()
+    void Awake()
     {
         TextAsset recommendationstext = Resources.Load<TextAsset>("user_1001_course_recommendations");
 
@@ -45,12 +46,15 @@ public class FileReader : MonoBehaviour
         }
 
         //to see if it is working
-        foreach (Recommendation r in recommendations)
+/*        foreach (Recommendation r in recommendations)
         {
             Debug.Log(r.CourseCode + ", " + r.Degree + ", " + r.DegreeSpecializations + ", " + r.Campus + ", " + r.KeySkills + ", " + r.Filter + ", " + r.Success_rate);
-        }
+        }*/
     }
-
+    private void Start()
+    {
+        
+    }
     void Update()
     {
 
