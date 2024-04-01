@@ -46,7 +46,7 @@ public class PreviousButtonScript : MonoBehaviour
             Renderer renderer = GetComponent<Renderer>();
             if (renderer != null)
             {
-                renderer.material.color = Color.white;
+                renderer.material.color = Color.red;
             }
 
             // Re-enable all the buttons
