@@ -19,7 +19,7 @@ public class EnviornmentCustomisationState : MonoBehaviour
 
     //uses arrays to hold different color options for the sky and floor
     public Color[] skyColourOptions;
-    public Color[] floorColourOptions;
+    public Material[] floorColourOptions;
 
     //GameObject arrays for close and far decorations which can be manipulated within Unity's editor
     public GameObject[] closeDecorations;
@@ -59,7 +59,8 @@ public class EnviornmentCustomisationState : MonoBehaviour
         //For example, it changes the camera's background color to match the selected sky color and updates the floor's material color.
         GameObject.Find("Main Camera").gameObject.GetComponent<Camera>().backgroundColor = skyColourOptions[skyColour - 1];
 
-        GameObject.Find("Floor").gameObject.GetComponent<Renderer>().material.color = floorColourOptions[floorColour - 1];
+        //GameObject.Find("Floor").gameObject.GetComponent<Renderer>().material.color = floorColourOptions[floorColour - 1];
+        GameObject.Find("Floor").gameObject.GetComponent<Renderer>().material = floorColourOptions[floorColour - 1];
 
         foreach (var obj in closeDecorations) obj.SetActive(false);
         closeDecorations[deskDeco-1].SetActive(true);
