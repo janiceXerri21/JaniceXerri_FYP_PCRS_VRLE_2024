@@ -40164,11 +40164,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d59c3ccca2fbcd4eb974fa257644ee3, type: 3}
---- !u!1 &1225967794 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6234613133323509612, guid: 63cd163209a97b54f8edbedb7bcde0e1, type: 3}
-  m_PrefabInstance: {fileID: 2119024186}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1229501443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54002,10 +53997,10 @@ MonoBehaviour:
   - {r: 0.3529412, g: 0.6039216, b: 1, a: 1}
   - {r: 0.8867924, g: 0.6483624, b: 0.7792081, a: 1}
   floorColourOptions:
-  - {r: 0.54191196, g: 0.6226415, b: 0.4258633, a: 1}
-  - {r: 0.2995283, g: 0.5, b: 0.4392901, a: 1}
-  - {r: 0.25882354, g: 0.20784314, b: 0.32156864, a: 1}
-  - {r: 0.5849056, g: 0.44559216, b: 0.2896938, a: 1}
+  - {fileID: 2100000, guid: 609608be20225494f874a3995432f752, type: 2}
+  - {fileID: 2100000, guid: c2ddc7f116fa9a44594d2262dcb4985f, type: 2}
+  - {fileID: 2100000, guid: 6cc63a1d18758fe4393a23df0b132e13, type: 2}
+  - {fileID: 2100000, guid: 410177873ecd8374d88a401a69cf2520, type: 2}
   closeDecorations:
   - {fileID: 150206020}
   - {fileID: 2057616121}
@@ -60348,20 +60343,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6759369985196017110, guid: 63cd163209a97b54f8edbedb7bcde0e1, type: 3}
   m_PrefabInstance: {fileID: 2119024186}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1653661350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225967794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dca2f595bc52f949acfb8f8ad5a807d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fileName: user_1001_course_recommendations.csv
-  textMesh: {fileID: 1360206728}
 --- !u!1001 &1662768223
 PrefabInstance:
   m_ObjectHideFlags: 0
