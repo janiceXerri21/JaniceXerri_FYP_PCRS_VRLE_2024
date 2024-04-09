@@ -2,20 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//for the customization and randomization of an environment within a game
 public class EnviornmentCustomisationState : MonoBehaviour
 {
     public int deskDeco = 1;
     public int skyDeco = 1;
     public int skyColour = 1;
     public int floorColour = 1;
-    
+
+    //used to represent each possible combination of the environment settings - can be changed to alter the environment setup
     public int ConfigNumber = 1111; //each possible combination of settings is given its own configNumber
 
+    //determines if the environment should be randomized at the start of the game. If true,
+    //the randomiseState method is called in the Start function to assign random values to the customization variables and update ConfigNumber accordingly.
     public bool startRandom = true;
 
+    //uses arrays to hold different color options for the sky and floor
     public Color[] skyColourOptions;
     public Color[] floorColourOptions;
 
+    //GameObject arrays for close and far decorations which can be manipulated within Unity's editor
     public GameObject[] closeDecorations;
     public GameObject[] farDecorations;
 
@@ -30,9 +36,12 @@ public class EnviornmentCustomisationState : MonoBehaviour
         ConfigAtStart = ConfigNumber;
     }
 
-    // Update is called once per frame
+    // Update is called once per frame -- Dynamic Update Based on ConfigNumber
     void Update()
     {
+
+        //the script dynamically updates the environment settings based on the current ConfigNumber. It parses this number to set the values of deskDeco, skyColour, skyDeco, and floorColour.
+        //These values are then used to update the environment's appearance by changing the active state of decorations and updating the colors of the sky and floor.
         int prevDeskDeco = deskDeco;
         int prevSkyDeco = skyDeco;
 
@@ -46,7 +55,8 @@ public class EnviornmentCustomisationState : MonoBehaviour
         char forthDigit = ConfigNumber.ToString()[3];
         floorColour = int.Parse(forthDigit.ToString());
 
-        //update the environment to match
+        //update the environment to match -  The script finds specific GameObjects (like "Main Camera" and "Floor") in the scene and updates their properties based on the selected options.
+        //For example, it changes the camera's background color to match the selected sky color and updates the floor's material color.
         GameObject.Find("Main Camera").gameObject.GetComponent<Camera>().backgroundColor = skyColourOptions[skyColour - 1];
 
         GameObject.Find("Floor").gameObject.GetComponent<Renderer>().material.color = floorColourOptions[floorColour - 1];
@@ -58,7 +68,7 @@ public class EnviornmentCustomisationState : MonoBehaviour
         farDecorations[skyDeco-1].SetActive(true);
     }
 
-    //randomises the value for each feature and uses those to define the new random current state
+    //randomises the value for each feature and uses those to define the new random current state - Randomizes the environment settings by generating random values for decoration and color options.
     public void randomiseState()
     {
         //randomise the current state
@@ -71,14 +81,15 @@ public class EnviornmentCustomisationState : MonoBehaviour
         ConfigNumber = int.Parse(deskDeco.ToString() + skyDeco.ToString() + skyColour.ToString() + floorColour.ToString());
     }
 
-    //Resets the config value to the starting config
+    //Resets the environment to the initial configuration 
     public void resetStateToStart()
     {
         //reset the config number (how unexpected)
         ConfigNumber = ConfigAtStart;
     }
 
-    //converts a config number to a 2d position
+    //converts a config number to a 2d position 
+    //Based on the current ConfigNumber, this method determines a 2D position that might be used for other logic in the game, like navigating a grid or menu.
     public int[] getCurrentPosition()
     {
         int[] position = new int[2];
@@ -377,7 +388,7 @@ public class EnviornmentCustomisationState : MonoBehaviour
         return position;
     }
 
-    //converts a 2d position to a config number
+    //converts a 2d position to a config number - Converts a given 2D position back to a configuration number, potentially to set the environment based on a player's position or choice in a menu.
     public int PositionToConfig(int x, int y)
     {
         int ConfigNumber = 1111;
