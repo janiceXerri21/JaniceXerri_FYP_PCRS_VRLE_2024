@@ -33344,6 +33344,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8590428270533197170, guid: 02506cbeb25fd864e8697202b12b3be3, type: 3}
   m_PrefabInstance: {fileID: 1071983306}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1072618084 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 448944, guid: ceba717d01c1fa1458e34f93acc30651, type: 3}
+  m_PrefabInstance: {fileID: 1333364810}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1075296186
 GameObject:
   m_ObjectHideFlags: 0
@@ -33377,6 +33382,7 @@ Transform:
   - {fileID: 287327170}
   - {fileID: 1576867269}
   - {fileID: 1667040901}
+  - {fileID: 1072618084}
   - {fileID: 1060066322}
   m_Father: {fileID: 1593837780}
   m_RootOrder: -1
@@ -41619,6 +41625,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 29eeb2ebf81eb0d4681682a1748b630a, type: 3}
   m_PrefabInstance: {fileID: 1329157976}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1333364810
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 1075296187}
+    m_Modifications:
+    - target: {fileID: 150556, guid: ceba717d01c1fa1458e34f93acc30651, type: 3}
+      propertyPath: m_Name
+      value: Tunnel Entrance 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150556, guid: ceba717d01c1fa1458e34f93acc30651, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 448944, guid: ceba717d01c1fa1458e34f93acc30651, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 448944, guid: ceba717d01c1fa1458e34f93acc30651, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448944, guid: ceba717d01c1fa1458e34f93acc30651, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448944, guid: ceba717d01c1fa1458e34f93acc30651, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448944, guid: ceba717d01c1fa1458e34f93acc30651, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.903
+      objectReference: {fileID: 0}
+    - target: {fileID: 448944, guid: ceba717d01c1fa1458e34f93acc30651, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.224
+      objectReference: {fileID: 0}
+    - target: {fileID: 448944, guid: ceba717d01c1fa1458e34f93acc30651, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.355
+      objectReference: {fileID: 0}
+    - target: {fileID: 448944, guid: ceba717d01c1fa1458e34f93acc30651, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9795001
+      objectReference: {fileID: 0}
+    - target: {fileID: 448944, guid: ceba717d01c1fa1458e34f93acc30651, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.012105126
+      objectReference: {fileID: 0}
+    - target: {fileID: 448944, guid: ceba717d01c1fa1458e34f93acc30651, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.013560983
+      objectReference: {fileID: 0}
+    - target: {fileID: 448944, guid: ceba717d01c1fa1458e34f93acc30651, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.20062198
+      objectReference: {fileID: 0}
+    - target: {fileID: 448944, guid: ceba717d01c1fa1458e34f93acc30651, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -1.047
+      objectReference: {fileID: 0}
+    - target: {fileID: 448944, guid: ceba717d01c1fa1458e34f93acc30651, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -1.801
+      objectReference: {fileID: 0}
+    - target: {fileID: 448944, guid: ceba717d01c1fa1458e34f93acc30651, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 23.167
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: ceba717d01c1fa1458e34f93acc30651, type: 3}
 --- !u!4 &1334818976 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5644125960700724945, guid: 373c073e75cde4644a2cce7b2b488c5b, type: 3}
