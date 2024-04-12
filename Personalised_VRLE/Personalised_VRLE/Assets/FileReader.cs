@@ -10,7 +10,7 @@ public class FileReader : MonoBehaviour
     //using this for initialisation
     void Awake()
     {
-        TextAsset recommendationstext = Resources.Load<TextAsset>("user_1001_course_recommendations");
+        TextAsset recommendationstext = Resources.Load<TextAsset>("final_recommendations_user_1001_course_recommendations");
 
         //text assest class enabling us to access the data in a string
         //creating an array - splitting based on the new line
@@ -45,8 +45,8 @@ public class FileReader : MonoBehaviour
             recommendations.Add(r);
         }
 
-        //to see if it is working
-/*        foreach (Recommendation r in recommendations)
+ /*       //to see if it is working
+        foreach (Recommendation r in recommendations)
         {
             Debug.Log(r.CourseCode + ", " + r.Degree + ", " + r.DegreeSpecializations + ", " + r.Campus + ", " + r.KeySkills + ", " + r.Filter + ", " + r.Success_rate);
         }*/

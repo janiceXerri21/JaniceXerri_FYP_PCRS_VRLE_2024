@@ -22,7 +22,7 @@ public class UIController : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         // Find the FileReader in the scene and get its recommendations
         fileReader = FindObjectOfType<FileReader>();
