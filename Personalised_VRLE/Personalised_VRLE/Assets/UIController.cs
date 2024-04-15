@@ -19,6 +19,8 @@ public class UIController : MonoBehaviour
     // Internal reference to FileReader
     private FileReader fileReader;
     private int currentIndex = 0;
+    // Dictionary to hold the mapping of degree specializations to config numbers
+    private Dictionary<string, int> degreeToConfigMapping;
 
 
     // Start is called before the first frame update
@@ -36,6 +38,9 @@ public class UIController : MonoBehaviour
         {
             Debug.LogError("No recommendations found. Ensure FileReader is loaded and has data.");
         }
+
+        // Initialize the mapping dictionary
+        InitializeDegreeToConfigMapping();
 
     }
 
@@ -92,12 +97,51 @@ public class UIController : MonoBehaviour
         }
     }
 
-/*    // Method to load a scene based on the current course
+    // Method to load a scene based on the current course
     public void LoadCourseScene()
     {
         // Here you would load the scene associated with the current course
         Recommendation currentRec = fileReader.recommendations[currentIndex];
         SceneManager.LoadScene("Scene_" + currentRec.CourseCode);
-    }*/
+    }
+
+
+    // Initialize the degree to config number mapping
+    private void InitializeDegreeToConfigMapping()
+    {
+        degreeToConfigMapping = new Dictionary<string, int>()
+        {
+            { "Mechanical", 1111 },
+            { "Computer Science Engineering", 2223 },
+            { "Civil Engineering", 3332 },
+            { "Electronics  Telecommunication Engineering", 4444 }
+        };
+    }
+
+    // Method to be called when the "Select Course" button is pressed
+    public void SelectCourseAndLoadVRLE()
+    {
+        string currentSpecialization = degreeSpecialisationValueText.text;
+
+        if (degreeToConfigMapping.TryGetValue(currentSpecialization, out int configNumber))
+        {
+            // Config number found, now load the VRLE scene with this config number
+            // Use PlayerPrefs, a singleton, or another method to pass the config number to the VRLE scene
+            //PlayerPrefs is a simple way to save and load data between Unity scenes and sessions.Think of it as a small,
+            //local database where you can set and get key - value pairs.It's often used for saving settings or preferences,
+            //but you can also use it for simple communication between scenes, like in your case.
+            PlayerPrefs.SetInt("StartConfigNumber", configNumber);
+            PlayerPrefs.Save(); //to make sure the value is saved immediately
+
+            // Load the VRLE scene
+            SceneManager.LoadScene("VRLE");
+        }
+        else
+        {
+            // Handle the case where the specialization does not have a config number
+            Debug.LogError("No config number found for the specialization: " + currentSpecialization);
+        }
+    }
+
 
 }

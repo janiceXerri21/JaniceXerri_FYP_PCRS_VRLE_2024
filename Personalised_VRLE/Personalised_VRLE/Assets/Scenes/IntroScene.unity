@@ -7508,6 +7508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherButtons:
   - {fileID: 665088382}
+  - {fileID: 917431616}
   uiController: {fileID: 1848198971}
 --- !u!65 &465175526
 BoxCollider:
@@ -10772,6 +10773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherButtons:
   - {fileID: 465175522}
+  - {fileID: 917431616}
   uiController: {fileID: 1848198971}
 --- !u!1001 &667080811
 PrefabInstance:
@@ -14490,7 +14492,7 @@ GameObject:
   - component: {fileID: 917431621}
   - component: {fileID: 917431620}
   - component: {fileID: 917431619}
-  - component: {fileID: 917431618}
+  - component: {fileID: 917431622}
   m_Layer: 0
   m_Name: Selecting
   m_TagString: Untagged
@@ -14514,21 +14516,6 @@ Transform:
   m_Father: {fileID: 2121581617}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &917431618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917431616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 258ac404e253f42478bbd446a4fb9eaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  otherButtons:
-  - {fileID: 665088382}
-  uiController: {fileID: 1848198971}
 --- !u!65 &917431619
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14592,6 +14579,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917431616}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &917431622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917431616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d23772bbbd203614fbcc4f29998db4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherButtons:
+  - {fileID: 665088382}
+  - {fileID: 465175522}
+  uiController: {fileID: 1848198971}
 --- !u!1 &920262148
 GameObject:
   m_ObjectHideFlags: 0
@@ -30615,7 +30618,7 @@ GameObject:
   - component: {fileID: 1987618597}
   - component: {fileID: 1987618596}
   m_Layer: 0
-  m_Name: Canvas_Next_text
+  m_Name: Canvas_Select_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

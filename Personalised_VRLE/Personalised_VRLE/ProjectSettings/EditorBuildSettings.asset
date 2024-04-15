@@ -5,12 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/VRLE.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/VRLE_Plain.unity
     guid: c5e9ee22f13b9b24b8a283d535c33ffe
+  - enabled: 1
+    path: Assets/Scenes/VRLE.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 5861c8843323b70469ab6e4102e38270, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 4afaf9223db5a1e4d97cb3a230314d02, type: 2}

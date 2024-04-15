@@ -29,9 +29,24 @@ public class EnviornmentCustomisationState : MonoBehaviour
     private int ConfigAtStart = 1111;
 
     // Start is called before the first frame update
-    void Start()
+    void Start() //This code will check if a StartConfigNumber has been set. If it has, it will use this to set the ConfigNumber. If not, and startRandom is true, it will call randomiseState() as before.
     {
-        if(startRandom)
+
+        // Retrieve the config number from PlayerPrefs
+        int startConfigNumber = PlayerPrefs.GetInt("StartConfigNumber", -1); // -1 is a default if not set
+
+        if (startConfigNumber != -1)
+        {
+            ConfigNumber = startConfigNumber; // Use the retrieved config number
+            startRandom = false; // Since you are setting a start config, turn off randomization
+            PlayerPrefs.DeleteKey("StartConfigNumber"); // Clear the value after using it
+        }
+        else if (startRandom)
+        {
+            randomiseState(); // Only randomize if a start config isn't provided
+        }
+
+        if (startRandom)
             randomiseState();
         ConfigAtStart = ConfigNumber;
     }
