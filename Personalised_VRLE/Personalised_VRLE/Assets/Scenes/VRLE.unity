@@ -49615,7 +49615,7 @@ MonoBehaviour:
   skyColour: 1
   floorColour: 1
   ConfigNumber: 1111
-  startRandom: 1
+  startRandom: 0
   skyColourOptions:
   - {r: 0.9622642, g: 0.94633037, b: 0.5492168, a: 1}
   - {r: 0.4546395, g: 0.7924528, b: 0.43734425, a: 1}
@@ -49624,8 +49624,8 @@ MonoBehaviour:
   floorColourOptions:
   - {fileID: 2100000, guid: 609608be20225494f874a3995432f752, type: 2}
   - {fileID: 2100000, guid: c2ddc7f116fa9a44594d2262dcb4985f, type: 2}
-  - {fileID: 2100000, guid: 6cc63a1d18758fe4393a23df0b132e13, type: 2}
-  - {fileID: 2100000, guid: 410177873ecd8374d88a401a69cf2520, type: 2}
+  - {fileID: 2100000, guid: 609608be20225494f874a3995432f752, type: 2}
+  - {fileID: 2100000, guid: 609608be20225494f874a3995432f752, type: 2}
   closeDecorations:
   - {fileID: 150206020}
   - {fileID: 2057616121}

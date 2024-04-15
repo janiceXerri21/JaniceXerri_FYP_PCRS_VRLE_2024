@@ -92,12 +92,12 @@ public class UIController : MonoBehaviour
         }
     }
 
-    // Method to load a scene based on the current course
+/*    // Method to load a scene based on the current course
     public void LoadCourseScene()
     {
         // Here you would load the scene associated with the current course
         Recommendation currentRec = fileReader.recommendations[currentIndex];
         SceneManager.LoadScene("Scene_" + currentRec.CourseCode);
-    }
+    }*/
 
 }
