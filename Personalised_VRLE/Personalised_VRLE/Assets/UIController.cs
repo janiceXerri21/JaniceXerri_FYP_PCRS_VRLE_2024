@@ -43,6 +43,30 @@ public class UIController : MonoBehaviour
         InitializeDegreeToConfigMapping();
 
     }
+    // Add a new boolean flag to keep track of whether secondary info is displayed
+    private bool isSecondaryInfoDisplayed = false;
+    public GameObject menubackgroundPanel; // Assigned this in Inspector
+    public GameObject secondaryPanel; // Assigned this in Inspector
+
+    // Add two public methods to handle displaying or hiding secondary information.
+    // Call this method when the "More Info" button is pressed
+    public void ToggleInfoDisplay()
+    {
+        isSecondaryInfoDisplayed = !isSecondaryInfoDisplayed; // Toggle the state
+
+        // Show or hide panels based on the toggled state
+        menubackgroundPanel.SetActive(!isSecondaryInfoDisplayed);
+        secondaryPanel.SetActive(isSecondaryInfoDisplayed);
+
+        // Update the UI text only if secondary info is to be shown
+        if (isSecondaryInfoDisplayed)
+        {
+            Recommendation currentRec = fileReader.recommendations[currentIndex];
+            courseCodeValueText.text = currentRec.CourseCode.ToString();
+            keySkillsValueText.text = currentRec.KeySkills;
+            filterValueText.text = currentRec.Filter;
+        }
+    }
 
     // Method to set the UI Text elements with the current course's data
     private void UpdateUI()
@@ -51,14 +75,20 @@ public class UIController : MonoBehaviour
         if (currentIndex >= 0 && currentIndex < fileReader.recommendations.Count)
         {
             Recommendation currentRec = fileReader.recommendations[currentIndex];
-            courseCodeValueText.text = currentRec.CourseCode.ToString();
+
+            // Update primary information
             campusValueText.text = currentRec.Campus;
             degreeValueText.text = currentRec.Degree;
             degreeSpecialisationValueText.text = currentRec.DegreeSpecializations;
-            keySkillsValueText.text = currentRec.KeySkills;
-            filterValueText.text = currentRec.Filter;
             successRateValueText.text = currentRec.Success_rate.ToString();
 
+            // If secondary info is currently displayed, update its content too
+            if (isSecondaryInfoDisplayed)
+            {
+                courseCodeValueText.text = currentRec.CourseCode.ToString();
+                keySkillsValueText.text = currentRec.KeySkills;
+                filterValueText.text = currentRec.Filter;
+            }
         }
     }
 
@@ -142,6 +172,11 @@ public class UIController : MonoBehaviour
             Debug.LogError("No config number found for the specialization: " + currentSpecialization);
         }
     }
+
+
+
+
+
 
 
 }
