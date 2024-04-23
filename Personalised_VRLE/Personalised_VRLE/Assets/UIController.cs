@@ -62,7 +62,6 @@ public class UIController : MonoBehaviour
         if (isSecondaryInfoDisplayed)
         {
             Recommendation currentRec = fileReader.recommendations[currentIndex];
-            courseCodeValueText.text = currentRec.CourseCode.ToString();
             keySkillsValueText.text = currentRec.KeySkills;
             filterValueText.text = currentRec.Filter;
         }
@@ -77,6 +76,7 @@ public class UIController : MonoBehaviour
             Recommendation currentRec = fileReader.recommendations[currentIndex];
 
             // Update primary information
+            courseCodeValueText.text = currentRec.CourseCode.ToString();
             campusValueText.text = currentRec.Campus;
             degreeValueText.text = currentRec.Degree;
             degreeSpecialisationValueText.text = currentRec.DegreeSpecializations;
@@ -85,7 +85,6 @@ public class UIController : MonoBehaviour
             // If secondary info is currently displayed, update its content too
             if (isSecondaryInfoDisplayed)
             {
-                courseCodeValueText.text = currentRec.CourseCode.ToString();
                 keySkillsValueText.text = currentRec.KeySkills;
                 filterValueText.text = currentRec.Filter;
             }
