@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement; // Import this to work with scenes
 using TMPro; //for TextMeshPro
 
 
+
 public class UIController : MonoBehaviour
 {
     public TMP_Text courseCodeValueText;
@@ -21,6 +22,10 @@ public class UIController : MonoBehaviour
     private int currentIndex = 0;
     // Dictionary to hold the mapping of degree specializations to config numbers
     private Dictionary<string, int> degreeToConfigMapping;
+
+
+    //reference to the slider component to be able to update the slider value
+    public Slider successRateSlider;
 
 
     // Start is called before the first frame update
@@ -80,7 +85,10 @@ public class UIController : MonoBehaviour
             campusValueText.text = currentRec.Campus;
             degreeValueText.text = currentRec.Degree;
             degreeSpecialisationValueText.text = currentRec.DegreeSpecializations;
-            successRateValueText.text = currentRec.Success_rate.ToString();
+            successRateValueText.text = currentRec.Success_rate.ToString() + "%"; // Display the percentage as text
+
+            // Update the slider's value to show the progress visually
+            successRateSlider.value = currentRec.Success_rate; 
 
             // If secondary info is currently displayed, update its content too
             if (isSecondaryInfoDisplayed)
