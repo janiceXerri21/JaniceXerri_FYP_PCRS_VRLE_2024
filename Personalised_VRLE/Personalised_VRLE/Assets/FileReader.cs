@@ -10,7 +10,7 @@ public class FileReader : MonoBehaviour
     //using this for initialisation
     void Awake()
     {
-        TextAsset recommendationstext = Resources.Load<TextAsset>("final_recommendations_user_1001_course_recommendations");
+        TextAsset recommendationstext = Resources.Load<TextAsset>("final_recommendations_user_1013_course_recommendations");
 
         //text assest class enabling us to access the data in a string
         //creating an array - splitting based on the new line
