@@ -1,13 +1,13 @@
 Course Code,Degree,Degree Specializations,Campus,Key Skills,Algorithm,Success Rate
 1904,B.E. ,Computer Science Engineering,MITCOE,"C, Java, CPP, HTML, CMStool, MYSQL",Content-Based,35
 1709,B.E. ,Computer Science Engineering,MITAOE,"Java, JavasCript, CPP, Laravel Phpframework  , HTML, Android, php, CSS",Content-Based,35
-2190,B.E. ,Computer Science Engineering,MITAOE,"C, Java, CPP, HTML, CMStool, MYSQL",Collaborative,35
-2418,B.E. ,Computer Science Engineering,MITAOE,"CPPProgramming, Core JAVA, CProgramming, MySql",Collaborative,35
-2220,B.E. ,Computer Science Engineering,MITCOE,"C, Java, CPP, HTML, CMStool, MYSQL",Collaborative,35
-2213,B.E. ,Computer Science Engineering,MITAOE,"C, Java, CPP, HTML, CMStool, MYSQL",Collaborative,35
+2137,B.E. ,Computer Science Engineering,MITAOE,"C, Java, CPP, HTML, CMStool, MYSQL",Collaborative,35
 7408,B.E. ,Computer Science Engineering,MITCOE,"Java, JavasCript, CPP, Laravel Phpframework  , HTML, Android, php, CSS",LLM (GPT-4),35
 2954,B.E. ,Computer Science Engineering,MITCOE,"C, Java, CPP, HTML, CMStool, MYSQL",LLM (GPT-4),35
 1545,B.E. ,Mechanical,MITCOE,CATIA,Content-Based,0
 2069,B.E. ,Mechanical,MITAOE,CATIA,Content-Based,0
 2068,B.E. ,Mechanical,MITAOE,CATIA,Content-Based,0
-2254,B.E. ,Electronics  Telecommunication Engineering,"MIT,Pune","AmazonWebServiCes, C CPP, Arduino, MongoDB, Linux, Golang,Microcontrollers, Gobot, InternetofThings, MATLAB, SQL, PHP",Collaborative,0
+2288,B.E. ,Mechanical,MITAOE,AUTOCAD,Collaborative,0
+2387,B.E. ,Electronics  Telecommunication Engineering,MITCOE,"EmbeddedC, MATLAB, C ",Collaborative,0
+2132,B.E. ,Electronics  Telecommunication Engineering,"MIT,Pune","C,PCB design",Collaborative,0
+2066,M TeCh ,Electronics  Telecommunication Engineering,MIT  WPU,"LoRateChnology, C, MathematiCaltoolMATLAB, basiCsofEmbeddedCPython, VHDL, platformWindowsandUNIX, EDATOOLMentorGraphiCs, PspiCe, ARM7, Python, Windows",Collaborative,0
